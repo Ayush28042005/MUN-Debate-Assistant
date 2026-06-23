@@ -12,7 +12,7 @@ A Python-based command-line application designed to help students prepare for Mo
 - Write and save speeches for each motion
 - View all motions at a glance
 - View detailed information for any motion
-- Persistent storage using JSON — data is never lost
+- Persistent storage using JSON - data is never lost
 - Duplicate motion prevention
 
 ---
