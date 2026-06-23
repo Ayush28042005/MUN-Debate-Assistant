@@ -17,7 +17,7 @@ A Python-based command-line application designed to help students prepare for Mo
 
 ---
 
-## 🧠 OOP Concepts Used
+## OOP Concepts Used
 
 | Concept | Where Used |
 |---|---|
@@ -46,7 +46,7 @@ MUN-Debate-Assistant/
 
 ---
 
-## 🚀 How To Run
+## How To Run
 
 ```bash
 python main.py
@@ -56,7 +56,7 @@ No external libraries required. Just Python 3.x!
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Ayush Saini**
 
