@@ -1,0 +1,79 @@
+{
+    "motions": [
+        {
+            "title": "Climate Change",
+            "arguments": [
+                {
+                    "content": "Renewable energy can replace fossil fuels entirely by 2050",
+                    "side": "for"
+                },
+                {
+                    "content": "Transitioning to green energy will destroy millions of jobs overnight",
+                    "side": "against"
+                }
+            ],
+            "research_points": [
+                {
+                    "fact": "Global temperatures have risen by 1.1'C since 1880.",
+                    "source": "NASA"
+                }
+            ],
+            "speeches": [
+                {
+                    "title": "Opening Speech on Climate Change",
+                    "content": "Climate change is the defining crisis of our generation and we must act now before it is too late"
+                }
+            ]
+        },
+        {
+            "title": "Artificial Intelligence in Education",
+            "arguments": [
+                {
+                    "content": "AI in classrooms will reduce human interaction and emotional development",
+                    "side": "against"
+                },
+                {
+                    "content": "AI can personalize learning for every student based on their pace",
+                    "side": "for"
+                }
+            ],
+            "research_points": [
+                {
+                    "fact": "60% of educators believe AI tools improve student engagement",
+                    "source": "UNESCO 2023"
+                }
+            ],
+            "speeches": [
+                {
+                    "title": "AI Should Enter Classrooms",
+                    "content": "Artificial Intelligence is not a threat to education but a powerful tool that can make quality learning accessible to every child on the planet"
+                }
+            ]
+        },
+        {
+            "title": "Universal Basic Income",
+            "arguments": [
+                {
+                    "content": "UBI can eliminate poverty and give people freedom to pursue meaningful work",
+                    "side": "for"
+                },
+                {
+                    "content": "UBI is economically unsustainable and will cause massive inflation",
+                    "side": "against"
+                }
+            ],
+            "research_points": [
+                {
+                    "fact": "Finland's UBI pilot showed improved wellbeing and mental health among recipients",
+                    "source": "Finnish Government Report 2020"
+                }
+            ],
+            "speeches": [
+                {
+                    "title": "Case for Universal Basic Income",
+                    "content": "Every human being deserves the dignity of financial security and Universal Basic Income is the most direct path to achieving that goal"
+                }
+            ]
+        }
+    ]
+}
