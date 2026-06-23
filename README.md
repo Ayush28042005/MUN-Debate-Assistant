@@ -1,6 +1,6 @@
 # MUN & Debate Preparation Assistant
 
-A Python-based command-line application designed to help students prepare for Model United Nations (MUN) and debate competitions by organizing motions, arguments, research points, and speeches — all in one place.
+A Python-based command-line application designed to help students prepare for Model United Nations (MUN) and debate competitions by organizing motions, arguments, research points and speeches - all in one place.
 
 ---
 
