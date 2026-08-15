@@ -1,3 +1,12 @@
+import sys
+
+# Ensure UTF-8 output on Windows terminals
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 from mun_assistant import MUNAssistant
 
 def main():
@@ -11,7 +20,8 @@ def main():
         print("4. Add Research Point")
         print("5. Save a Speech")
         print("6. View Motion Details")
-        print("7. Exit")
+        print("7. Export Motion to File")
+        print("8. Exit")
 
         choice = input("\nEnter your choice: ")
 
@@ -48,11 +58,15 @@ def main():
             assistant.view_motion_details(title)
 
         elif choice == "7":
+            title = input("Enter motion title: ").strip()
+            assistant.export_motion(title)
+
+        elif choice == "8":
             print("👋 Goodbye! Good luck with your MUN!")
             break
 
         else:
-            print("❌ Invalid choice! Please enter 1-7.")
+            print("❌ Invalid choice! Please enter 1-8.")
 
 if __name__ == "__main__":
     main()

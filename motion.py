@@ -37,5 +37,52 @@ class Motion:
         motion.speeches = [Speech.from_dict(s) for s in data["speeches"]]
         return motion
 
+    def generate_dossier(self):
+        lines = [
+            "=" * 60,
+            f"MUN & DEBATE DOSSIER: {self.title.upper()}",
+            "=" * 60,
+            "",
+            "--- ARGUMENTS IN FAVOR (FOR) ---"
+        ]
+
+        for_args = [arg for arg in self.arguments if arg.side.lower() == "for"]
+        if for_args:
+            for i, arg in enumerate(for_args, 1):
+                lines.append(f"  {i}. {arg.content}")
+        else:
+            lines.append("  (No 'FOR' arguments added yet)")
+
+        lines.append("")
+        lines.append("--- ARGUMENTS AGAINST ---")
+        against_args = [arg for arg in self.arguments if arg.side.lower() == "against"]
+        if against_args:
+            for i, arg in enumerate(against_args, 1):
+                lines.append(f"  {i}. {arg.content}")
+        else:
+            lines.append("  (No 'AGAINST' arguments added yet)")
+
+        lines.append("")
+        lines.append("--- RESEARCH FACTS & EVIDENCE ---")
+        if self.research_points:
+            for i, rp in enumerate(self.research_points, 1):
+                lines.append(f"  {i}. {rp.fact}")
+                lines.append(f"     Source: {rp.source}")
+        else:
+            lines.append("  (No research points added yet)")
+
+        lines.append("")
+        lines.append("--- PREPARED SPEECHES ---")
+        if self.speeches:
+            for i, sp in enumerate(self.speeches, 1):
+                lines.append(f"\n[Speech {i}: {sp.title}]")
+                lines.append(f"{sp.content}")
+        else:
+            lines.append("  (No speeches saved yet)")
+
+        lines.append("")
+        lines.append("=" * 60)
+        return "\n".join(lines)
+
     def __str__(self):
         return f"📋 Motion: {self.title} | Arguments: {len(self.arguments)} | Research: {len(self.research_points)} | Speeches: {len(self.speeches)}"

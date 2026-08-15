@@ -1,5 +1,13 @@
 import json
+import sys
 from motion import Motion
+
+# Ensure UTF-8 output on Windows terminals
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 class MUNAssistant:
     def __init__(self, filename="data.json"):
@@ -84,3 +92,23 @@ class MUNAssistant:
         print("\n-- Speeches --")
         for sp in motion.speeches:
             print(sp)
+
+    def export_motion(self, title, filename=None):
+        motion = self.get_motion(title)
+        if not motion:
+            print(f"❌ Motion '{title}' not found!")
+            return None
+
+        if not filename:
+            # Create a clean safe filename from motion title
+            safe_title = "".join(c if c.isalnum() or c in (" ", "_", "-") else "_" for c in motion.title).strip().replace(" ", "_")
+            filename = f"{safe_title}_dossier.txt"
+
+        try:
+            with open(filename, "w", encoding="utf-8") as f:
+                f.write(motion.generate_dossier())
+            print(f"✅ Motion exported successfully to '{filename}'!")
+            return filename
+        except Exception as e:
+            print(f"❌ Error exporting motion: {e}")
+            return None

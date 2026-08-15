@@ -1,10 +1,10 @@
-# MUN & Debate Preparation Assistant
+# 🎤 MUN & Debate Preparation Assistant
 
-A Python-based command-line application designed to help students prepare for Model United Nations (MUN) and debate competitions by organizing motions, arguments, research points and speeches - all in one place.
+A Python-based command-line application designed to help students prepare for Model United Nations (MUN) and debate competitions by organizing motions, arguments, research points, and speeches — all in one place.
 
 ---
 
-## Features
+## ✨ Features
 
 - Add debate motions/topics
 - Store arguments for and against each motion
@@ -12,12 +12,13 @@ A Python-based command-line application designed to help students prepare for Mo
 - Write and save speeches for each motion
 - View all motions at a glance
 - View detailed information for any motion
-- Persistent storage using JSON - data is never lost
+- Export motion dossier to a formatted cheat-sheet text file
+- Persistent storage using JSON — data is never lost
 - Duplicate motion prevention
 
 ---
 
-## OOP Concepts Used
+## 🧠 OOP Concepts Used
 
 | Concept | Where Used |
 |---|---|
@@ -30,7 +31,7 @@ A Python-based command-line application designed to help students prepare for Mo
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 MUN-Debate-Assistant/
@@ -46,7 +47,7 @@ MUN-Debate-Assistant/
 
 ---
 
-## How To Run
+## 🚀 How To Run
 
 ```bash
 python main.py
@@ -56,7 +57,7 @@ No external libraries required. Just Python 3.x!
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Ayush Saini**
-
+B.Tech CSE-AIML | 3rd Year
